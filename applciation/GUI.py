@@ -61,7 +61,6 @@ class GestureGUI:
         self.btn_save = tk.Button(frame_top, text=" Save Config", command=self.save_config, width=15)
         self.btn_save.grid(row=0, column=2, padx=5)
 
-        # Gesture mappings
         mapping_frame = tk.LabelFrame(self.root, text=" Gesture Mappings", padx=10, pady=10)
         mapping_frame.pack(padx=10, pady=10, fill="x")
 
@@ -73,7 +72,6 @@ class GestureGUI:
             dropdown.grid(row=i, column=1, padx=10, pady=3)
             self.dropdown_vars.append((gesture, var))
 
-        # Logs
         log_frame = tk.LabelFrame(self.root, text="Logs", padx=10, pady=10)
         log_frame.pack(padx=10, pady=10, fill="both", expand=True)
 
@@ -105,7 +103,6 @@ class GestureGUI:
         self.stop_event.clear()
 
         try:
-            # Only local webcam, no remote option
             self.log("[INFO] Camera Source: LOCAL WEBCAM")
 
             self.c_process = subprocess.Popen(

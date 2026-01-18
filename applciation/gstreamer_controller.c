@@ -111,6 +111,13 @@ int main(int argc, char *argv[]) {
   gst_init (&argc, &argv);
   memset (&data, 0, sizeof (data));
 
+
+  //Pipeline whihc does not display the vidoe for buidl or cna integrate it as well as the one below
+  // pipeline_desc = g_strdup_printf(
+  //   "autovideosrc ! tee name=t "
+  //   "t. ! queue ! videoconvert ! video/x-raw,width=%d,height=%d,format=RGB ! appsink name=sink ",
+  //   FRAME_WIDTH, FRAME_HEIGHT);
+
   pipeline_desc = g_strdup_printf(
     "autovideosrc ! tee name=t "
     "t. ! queue ! videoconvert ! video/x-raw,width=%d,height=%d,format=RGB ! appsink name=sink "

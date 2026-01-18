@@ -1,8 +1,8 @@
 {
-  "Fist": "Next",
+  "Fist": "Previous",
   "Thumb Up": "Play/Pause",
   "Index Point": "Volume Up",
   "Two Fingers": "Volume Down",
   "Four Fingers": "Mute",
-  "OK Sign": "Volume Up"
+  "OK Sign": "Volume Down"
 }
